@@ -1,0 +1,19 @@
+📝 Day 01 Problem Statement: The Kinetic Brick
+ 
+FacadeThe Scenario:
+
+In modern parametric architecture, responsive skins and kinetic facades are used to control sunlight and ventilation.
+Today, we are going to simulate a smart brick facade that reacts to an environmental sensor (an Attractor Point).
+
+The Challenge:
+Write a Python script within Grasshopper that generates a 2D grid of bricks.
+ Using an Attractor Point, calculate the distance to each brick and use that data to drive its rotation angle. 
+The closer a brick is to the attractor point, the more it should rotate to "open up" the facade.
+
+Key Tasks (The Logic):
+
+Grid Generation: Create a set of base points using a nested loop (X and Y dimensions).
+Distance Calculation: Measure the distance between each base point and the given Attractor_Point.
+Data Remapping: Write a custom remap function to translate the distance values into rotation angles (e.g., mapping distances to a range of $0$ to $90$ degrees).
+Transformation: Generate a brick geometry (Rectangle or Box) at each point and rotate it around its center point based on the remapped angle.
+Expected Output:A list of transformed geometries (Curves or Breps) creating a smooth, wave-like opening pattern across the facade.

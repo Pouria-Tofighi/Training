@@ -1,0 +1,22 @@
+📝 Day 02 Problem Statement: Magnetic Flow Fields & Particle Tracing
+
+The Scenario:
+In advanced parametric design and urban analysis, understanding "flows" (such as wind tunnels, pedestrian movement, or structural force distribution) is absolutely crucial. Today, we are stepping away from rigid geometries and linear grids to dive into the world of organic forms and fluid dynamics. We are going to build a magnetic force field and trace the paths of moving particles within it!
+
+The Challenge:
+Write a Python script within Grasshopper that generates a 2D grid of "Seed Points" to act as our initial particles. Using two control points (an Attractor and a Repeller), create a swirling force field. Your script must calculate the step-by-step trajectory of each particle through this field and draw their trails as continuous NURBS curves.
+
+Key Tasks (The Logic):
+
+Seed Generation: Create a base grid of starting points.
+
+Particle Tracing: Implement a nested loop to calculate and track the movement of each particle over a defined number of steps (e.g., 100 iterations).
+
+Vector Math & Swirl: Calculate force vectors relative to the control points. Use the cross product (rg.Vector3d.CrossProduct) around the Z-axis to generate rotational forces (vortices).
+
+Distance Weighting: Develop a logic where the closer a particle is to a control point, the stronger that point's gravitational or repulsive influence becomes.
+
+Curve Generation: Collect the tracked path points of each particle into a list and convert them into smooth, continuous curves (ControlPointCurve).
+
+Expected Output:
+A set of intertwined, fluid, and organic curves that beautifully visualize the flow of a magnetic field.
