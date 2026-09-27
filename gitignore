@@ -9,3 +9,5 @@ env/
 *.ghbak
 *.3dmbak
 .DS_Store
+
+**/images/
